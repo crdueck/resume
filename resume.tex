@@ -1,5 +1,7 @@
 \documentclass[10pt]{article}
 
+\usepackage{fontawesome}
+\usepackage[margin=1.0in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
 
@@ -8,23 +10,24 @@
 \setlength{\tabcolsep}{0pt}
 \setlength{\leftmargini}{10pt}
 
-\usepackage[margin=1.0in]{geometry}
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\topmargin}{-.375in}
 \addtolength{\textwidth}{0.6in}
 \addtolength{\textheight}{0.95in}
-\raggedbottom
+
 \raggedright
 \pagestyle{empty}
 
 \newcommand{\resheader}[6]{\
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-    \textbf{\huge #1} & {\large #2} \vspace{4pt}\\
-    {\large #3} & {\large #4} \vspace{4pt}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}l}
+    \textbf{\huge #1} & {\large #2}
+    \vspace{4pt} \\
+    {\large #3} & {\large #4}
+    \vspace{4pt} \\
     {\large #5} & {\large #6}
 \end{tabular*}\vspace{4pt}}
 
-\definecolor{headercol}{gray}{0.8}
+\definecolor{headercol}{gray}{0.85}
 \newcommand{\resheading}[1]{{\large \colorbox{headercol}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 
 \newcommand{\ressubheading}[3]{\item
@@ -32,89 +35,90 @@
     \textbf{#1} & #2 \\ #3
 \end{tabular*}\vspace{-4pt}}
 
+\newcommand{\sh}[4]{\item
+\begin{tabular*}{7in}{l l}
+    \textbf{#3} & \textbf{#1} \\ #2 & #4
+\end{tabular*}}
+
 \newcommand{\resitem}[2]{\item{\textbf{#1} #2}}
+
+\newcommand{\phone}{{\Large\faPhoneSign} 289 213 8153}
+\newcommand{\email}{{\Large\faEnvelopeAlt} \href{mailto:crdueck@uwaterloo.ca}{crdueck@uwaterloo.ca}}
+\newcommand{\github}{{\Large\faGithub} \href{https://github.com/crdueck}{github.com/crdueck}}
 
 \begin{document}
 
-\resheader{Christopher Dueck} {Student ID: 20411985}
-{Pure Mathematics} {Phone: 289 213 8153}
-{30 Regina Street North, Waterloo, ON} {Email: \href{mailto:crdueck@uwaterloo.ca}{crdueck@uwaterloo.ca}}
+\resheader
+    {Christopher Dueck}                    \phone
+    {Software Developer}                   \email
+    {30 Regina Street North, Waterloo, ON} \github
 
 \resheading{Education}
 \begin{description}
-    \ressubheading{University of Waterloo - Waterloo, ON} {2012 - Present} {Candidate for Bachelor of Mathematics, Pure Mathematics}
-    \ressubheading{Notre Dame College School - Welland, ON} {2008 - 2012} {Focus on Mathematics and Physical Sciences}
+    \ressubheading{University of Waterloo - Waterloo, ON} {2012 - Present}
+    {Candidate for Bachelor of Mathematics, Pure Mathematics}
+    \ressubheading{Notre Dame College School - Welland, ON} {2008 - 2012}
+    {Focus on Mathematics and Science}
 \end{description}
 
 \resheading{Skills}
 \begin{description}
-    \resitem{Programming Languages:} {Haskell, Scala, C/C\texttt{++}, Python, Java, Scheme, SQL}
-    %\resitem{Technologies:}{\textbf{based on job description} Development
-    %experience on GNU/Linux, version control (Git, SVN), mathematics software
-    %(GNU Octave, Sage Math), 3D modeling/raytracing (BRL-CAD), computer graphics (OpenGL), database and persistance experience (PostgreSQL, Redis), an active GitHub account (crdueck)}
-    \resitem{Technologies:} {Development experience on GNU/Linux, version control (Git, SVN), knowledge of object oriented and functional programming techniques, experience developing concurrent, distributed and fault tolerant systems using Akka, an active GitHub account with personal projects (\href{https://github.com/crdueck}{crdueck})}
-    \resitem{Personal Skills:}{\vspace{-4pt}
+    \resitem{Programming Languages:} {Haskell, Scala, Go, Python, C/C\texttt{++}, Java}
+    \resitem{Technical}{\vspace{-4pt}
     \begin{itemize}
-        \item{Able to work productively as a group member or independently, with minimal supervision}
-        \item{Strong public speaking and leadership skills gained through instructing and leading others at camp}
-        \item{Highly capable self-learner, able to learn new skills quickly and independently}
+            \item{Strong understanding of object oriented and functional programming design patterns}
+            \item{Experience developing fault tolerant, concurrent, distributed systems}
+            % \item{Work experience applying Agile and Test Driven Development methods}
+            %\item{Competency with SQL/NoSQL technologies such as PostgreSQL, Redis}
+            % \item{Familiarity with automation tools (TeamCity, SaltStack and Vagrant)}
+            % \item{Proficient using version control systems (Git, SVN)}
+            \item{Active GitHub account with personal projects and contributions to open source software such as BRL-CAD and the Glasgow Haskell compiler}
+    \end{itemize}}
+    \resitem{Personal}{\vspace{-4pt}
+    \begin{itemize}
+        \item{Highly capable autodidact, able to learn new skills quickly and independently}
+        \item{Able to work productively as a group member or independently with minimal supervision}
+        % \item{Strong public speaking and leadership skills}
     \end{itemize}}
 \end{description}
 
 \resheading{Career History}
 \begin{description}
+    \ressubheading{Software Developer} {January - April 2015} {Sandvine Inc.}
+    \begin{itemize}
+        \item{Diagnosed performance issues involving mutex contention in a highly concurrent C\texttt{++} application}
+        \item{Designed and prototyped a high performance network traffic generator application written in Go}
+    \end{itemize}
+
+    \ressubheading{Software Developer} {April - August 2014} {Bank of America Merrill Lynch}
+    \begin{itemize}
+        \item{Designed a clean, user friendly web UI for an internal application using HTML/CSS and Java}
+        \item{Implemented new metrics and monitoring features using Graphite}
+        \item{Performed a major refactoring of a legacy financial data publishing system written in Python}
+    \end{itemize}
+
     \ressubheading{Software Developer} {January - April 2013, August - December 2013} {exactEarth Ltd.}
     \begin{itemize}
-        \item{Implemented a concurrent, distributed and fault tolerant event-driven work dispatching application using Scala and Akka}
-        \item{Profiled a performance critical C\texttt{++} application and increased performance by over 400\% on real world workloads}
-        \item{Designed a prototype streaming data service in Haskell capable of accepting multiple port connections and concurrently serving database queries}
+        \item{Implemented a fault tolerant, distributed, event-driven task dispatching service using Scala and Akka}
+        \item{Profiled and optimized a performance critical C\texttt{++} application, which decreased execution time by over 400\%}
+        \item{Developed an automated build/test/deploy workflow using TeamCity, SaltStack and Vagrant}
         \item{Diagnosed and patched a memory leak in a database populating Python script}
+        \item{Independently prepared and presented a ``lunch and learn" on advanced functional programming techniques}
     \end{itemize}
-    \ressubheading{Open Source Software Developer} {May - August 2012} {Google, \href{http://brlcad.org}{BRL-CAD (Open Source Solid Modeling)}}
+
+    \ressubheading{Open Source Software Developer} {May - August 2012} {Google, BRL-CAD (Open Source Solid Modeling)}
     \begin{itemize}
         \item{Participated successfully as a paid contract developer for Google in the \href{https://google-melange.appspot.com/gsoc/homepage/google/gsoc2012}{Summer of Code 2012}}
-        \item{Extended the ``analyze" command to provide additional quantitive information about geometric primitives}
-        \item{Applied knowledge of mathematics, algorithms, and the C language to improve efficiency of preexisting analysis utilities}
-        \item{Consistently met evaluation deadlines, and completed self-evaluations regarding state of project}
+        % \item{Extended the ``analyze" command to provide additional quantitive information about geometric primitives}
+        \item{Applied knowledge of mathematics and algorithms to improve efficiency of geometric analysis utilities}
+        \item{Consistently met evaluation deadlines and completed self-evaluations regarding state of project}
         \item{Collaborated with other experienced open source developers who provided mentorship}
     \end{itemize}
-\end{description}
-
-%\ressubheading {High Ropes Course Instructor} {Summers 2010 - 2011} {Cave Springs Camp}
-    %\begin{itemize}
-        %\item {Responsible for the safety and well-being of participants}
-        %\item {Instructed staff in proper climbing safety and belaying techniques}
-        %\item {Conducted takedown and set up of climbing equipment}
-    %\end{itemize}
-%\begin{description}
-    %\item {\textbf{Climbing:}}
-    %\begin{itemize}
-        %\item {Proper use of various belaying devices (ATC, GriGri, Figure-8, etc)}
-        %\item {Set up of Static and Dynamic belay systems}
-        %\item {Wide knowledge of climbing related knots}
-        %\item {Instructional experience regarding harnessing, dealing with climber's anxiety and teaching proper belaying and spotting techniques}
-    %\end{itemize}
-%\end{description}
-
-\resheading{Leadership Activities}
-\begin{description}
-    \ressubheading{Senior Staff Member} {Summers 2010 - 2011} {Cave Springs Camp}
-    \begin{itemize}
-        \item{Provided leadership for new staff members}
-        \item{Collectively brainstormed with other staff to design creative weekly scheduling}
-    \end{itemize}
-    %\ressubheading{Camp Counsellor} {Summer 2009} {Cave Springs Camp}
-    %\begin{itemize}
-        %\item{Counselled for youth aged 9 - 18}
-        %\item{Scheduled day-to-day activities such as archery, hiking, swimming, canoeing and outdoor camping}
-    %\end{itemize}
 \end{description}
 
 \resheading{Academic Honours}
 \begin{description}
     \resitem{President's Scholarship} {University of Waterloo \hfill 2012}
     \resitem{Graduated with Honours} {Notre Dame College School \hfill 2012}
-    %\resitem{High Ropes Instructor/Leadership Training} {Adventureworks! \hfill 2010}
 \end{description}
-
 \end{document}
