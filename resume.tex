@@ -20,11 +20,11 @@
 
 \newcommand{\resheader}[6]{\
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}l}
-    \textbf{\huge #1} & {\large #2}
+    \textbf{\huge #1} & #2
     \vspace{4pt} \\
-    {\large #3} & {\large #4}
+    {\large #3} & #4
     \vspace{4pt} \\
-    {\large #5} & {\large #6}
+    {\large #5} & #6
 \end{tabular*}\vspace{4pt}}
 
 \definecolor{headercol}{gray}{0.85}
@@ -37,9 +37,9 @@
 
 \newcommand{\resitem}[2]{\item{\textbf{#1} #2}}
 
-\newcommand{\phone}{{\Large\faPhone} 289 213 8153}
-\newcommand{\email}{{\Large\faEnvelope} \href{mailto:crdueck@uwaterloo.ca}{crdueck@uwaterloo.ca}}
-\newcommand{\github}{{\Large\faGithub} \href{https://github.com/crdueck}{github.com/crdueck}}
+\newcommand{\phone}{{\Large\faPhone} {\large 289 213 8153}}
+\newcommand{\email}{{\Large\faEnvelope} {\large \href{mailto:crdueck@uwaterloo.ca}{crdueck@uwaterloo.ca}}}
+\newcommand{\github}{{\Large\faGithub} {\large \href{https://github.com/crdueck}{github.com/crdueck}}}
 
 \begin{document}
 
@@ -58,16 +58,15 @@
 
 \resheading{Skills}
 \begin{description}
-    \resitem{Programming Languages:} {Haskell, Scala, Javascript, Go, Python, C/C\texttt{++}, Java}
+    \resitem{Programming Languages:} {Haskell, Javascript, Go, Python, C, C\texttt{++}, Java, Scala, C\texttt{\#}}
     \resitem{Technical}{\vspace{-4pt}
     \begin{itemize}
             \item{Strong understanding of object oriented and functional programming design patterns}
-            % \item{Experience developing fault tolerant, concurrent, distributed systems}
-            \item{Long term experience with Linux both for personal and professional use}
+            \item{Experience developing fault tolerant, concurrent, distributed systems}
+            \item{Long term experience with Linux for both personal and professional use}
             \item{Work experience applying Agile and Test Driven Development methods}
             %\item{Competency with SQL/NoSQL technologies such as PostgreSQL, Redis}
             % \item{Familiarity with automation tools (TeamCity, SaltStack and Vagrant)}
-            \item{Active GitHub account with personal projects and contributions to open source software such as BRL-CAD and the Glasgow Haskell compiler}
     \end{itemize}}
     % \resitem{Personal}{\vspace{-4pt}
     % \begin{itemize}
@@ -80,16 +79,16 @@
 \begin{description}
     \ressubheading{Software Developer} {November - December 2015} {Future Access}
     \begin{itemize}
-        \item{Redesigned a RESTful backend webservice in Node.js for a mobile app}
-        \item{Prototyped a crossplatform mobile app using C\texttt{\#} and Xamarin}
-        \item{Prepared and presented a teaching seminar on Git and distributed version control}
+        \item{Designed and implemented a REST backend webservice in Node.js}
+        \item{Prototyped a cross-platform mobile app using C\texttt{\#} and Xamarin}
+        \item{Presented a teaching seminar on Git and distributed version control}
     \end{itemize}
 
     \ressubheading{Software Developer} {January - April 2015} {Sandvine Inc.}
     \begin{itemize}
         \item{Diagnosed performance issues (mutex contention, memory allocation) in a concurrent C\texttt{++} application}
         \item{Designed and prototyped a high performance network traffic generator written in Go}
-        \item{Scripted various unit test and benchmark reporting utilities in Python}
+        \item{Scripted miscellaneous unit test and benchmark reporting utilities in Python}
     \end{itemize}
 
     \ressubheading{Software Developer} {April - August 2014} {Bank of America Merrill Lynch}
@@ -102,7 +101,7 @@
     \ressubheading{Software Developer} {January - April 2013, August - December 2013} {exactEarth Ltd.}
     \begin{itemize}
         \item{Implemented a fault tolerant, distributed, event-driven task dispatching service using Scala and Akka}
-        \item{Profiled and optimized a performance critical C\texttt{++} application, which decreased execution time by over 400\%}
+        \item{Profiled and optimized a performance critical C\texttt{++} application, significantly reducing execution time}
         % \item{Developed an automated build/test/deploy workflow using TeamCity, SaltStack and Vagrant}
         \item{Diagnosed and patched a memory leak in a database populating Python script}
         \item{Independently prepared and presented a ``lunch and learn" on advanced functional programming techniques}
